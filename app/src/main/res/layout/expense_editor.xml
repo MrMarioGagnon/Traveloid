@@ -118,7 +118,7 @@
 
 	</LinearLayout>
 	<EditText android:inputType="numberDecimal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/editTextExchangeRate" android:layout_alignBaseline="@+id/editTextAmount" android:layout_alignBottom="@+id/editTextAmount" android:layout_toLeftOf="@+id/spinnerCurrency">
-		<!--requestFocus></requestFocus-->
+		<requestFocus></requestFocus>
 	</EditText>
 
 
