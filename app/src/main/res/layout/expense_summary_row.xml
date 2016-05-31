@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:paddingLeft="10sp" android:paddingRight="10sp"
+	android:layout_height="wrap_content" android:paddingTop="2sp">
+
+	<TextView android:id="@+id/textViewTraveler" android:text="Traveler"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:gravity="center_horizontal" android:textStyle="bold" />
+
+	<TextView android:text="@string/label_today_expense"
+		android:id="@+id/textViewLabelTodayExpense" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_below="@id/textViewTraveler" />
+
+	<TextView android:text="Today Expense Text"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:id="@+id/textViewTodayExpense" android:layout_below="@id/textViewTraveler"
+		android:layout_toRightOf="@id/textViewLabelTodayExpense" android:textColor="@color/primary_text_default_material_dark" android:textStyle="bold"/>
+
+	<TextView android:text="@string/label_total" android:id="@+id/textViewLabelTotal"
+		android:layout_below="@id/textViewLabelTodayExpense"
+		android:layout_height="wrap_content" android:layout_width="wrap_content" />
+
+	<TextView android:text="Total Text" android:layout_width="wrap_content"
+		android:layout_below="@id/textViewLabelTodayExpense"
+		android:layout_height="wrap_content" android:id="@+id/textViewTotal"
+		android:layout_toRightOf="@id/textViewLabelTotal" android:textColor="@color/primary_text_default_material_dark" android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:padding="2dip">
+
+	<TextView android:layout_height="wrap_content" android:id="@+id/textViewTripNameLabel"
+		android:layout_width="wrap_content" android:text="@string/label_trip"
+		android:textStyle="bold" />
+
+	<TextView android:layout_height="wrap_content" android:id="@+id/textViewTripName"
+		android:layout_width="wrap_content" android:text="To Be Fill"
+		android:layout_toRightOf="@id/textViewTripNameLabel" />
+
+	<ImageButton android:src="@mipmap/ic_btn_window"
+		android:id="@+id/imageButtonTrip" android:layout_alignParentRight="true"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@id/imageButtonTrip" android:id="@+id/linearLayoutExpenseButton">
+
+		<Button android:id="@+id/buttonViewExpenses"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/view_expense" android:paddingTop="5dip"
+			android:layout_weight="1" />
+
+		<Button android:id="@+id/buttonAddExpense"
+			android:layout_width="wrap_content" android:text="@string/add_expense"
+			android:layout_height="wrap_content" android:layout_below="@id/imageButtonTrip"
+			android:layout_toRightOf="@id/buttonViewExpenses"
+			android:layout_weight="1" />
+
+	</LinearLayout>
+
+	<ListView android:id="@+id/listViewExpenseSummary"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@id/linearLayoutExpenseButton" />
+
+</RelativeLayout>
+
+
+	
+	
+

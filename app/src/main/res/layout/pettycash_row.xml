@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+    <TextView android:layout_width="wrap_content" android:id="@+id/textViewNameLabel"
+        android:layout_height="wrap_content" android:textStyle="bold"
+        android:text="@string/label_name" />
+
+    <TextView android:id="@+id/textViewName"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="To Be Fill" android:layout_toRightOf="@id/textViewNameLabel" />
+
+    <TextView android:layout_width="wrap_content" android:id="@+id/textViewAmountLabel"
+        android:layout_height="wrap_content" android:text="@string/label_amount"
+        android:layout_below="@id/textViewNameLabel" android:textStyle="bold" />
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="To Be Fill"
+        android:id="@+id/textViewAmount" android:layout_below="@id/textViewName"
+        android:layout_toRightOf="@id/textViewAmountLabel" />
+
+</RelativeLayout>
+

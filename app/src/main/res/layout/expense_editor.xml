@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent" android:layout_width="fill_parent"
+	android:padding="2dip">
+
+	<TextView android:layout_width="fill_parent" android:id="@+id/textViewMessage"
+		android:layout_height="wrap_content" android:textColor="@color/red"
+		android:visibility="gone" />
+
+	<TextView android:id="@+id/textViewTripLabel" android:text="@string/label_trip"
+		android:textStyle="bold" android:layout_width="wrap_content"
+		android:layout_below="@id/textViewMessage" android:layout_height="wrap_content" />
+	<TextView android:id="@+id/textViewTripName"
+		android:layout_below="@id/textViewMessage" android:layout_toRightOf="@id/textViewTripLabel"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	<TextView android:text="@string/label_traveler" android:id="@+id/textViewTravelerLabel"
+		android:textStyle="bold" android:layout_below="@id/textViewTripLabel"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	<TextView android:id="@+id/textViewTraveler"
+		android:layout_below="@id/textViewTripLabel" android:layout_toRightOf="@id/textViewTravelerLabel"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	<ImageButton android:src="@mipmap/ic_btn_modify"
+		android:layout_below="@id/textViewTripName" android:id="@+id/imageButtonTraveler"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" />
+
+	<TextView android:text="@string/label_payor" android:id="@+id/textViewPayerLabel"
+		android:textStyle="bold" android:layout_below="@id/imageButtonTraveler"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	<TextView android:id="@+id/textViewPayor"
+		android:layout_below="@id/imageButtonTraveler" android:layout_toRightOf="@id/textViewPayerLabel"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	<ImageButton android:src="@mipmap/ic_btn_modify"
+		android:layout_below="@id/imageButtonTraveler" android:id="@+id/imageButtonPayor"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" />
+
+
+	<TextView android:id="@+id/textViewDateLabel" android:text="@string/label_date"
+		android:layout_below="@id/imageButtonPayor" android:textStyle="bold"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	<TextView android:id="@+id/textViewDate" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_toRightOf="@id/textViewDateLabel"
+		android:layout_below="@id/imageButtonPayor" />
+	<ImageButton android:src="@mipmap/ic_btn_modify"
+		android:layout_below="@id/imageButtonPayor" android:id="@+id/imageButtonDate"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" />
+
+
+
+	<TextView android:id="@+id/textViewCategoryLabel"
+		android:text="@string/label_category" android:textStyle="bold"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/imageButtonDate" />
+	<TextView android:id="@+id/textViewCategory"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/textViewCategoryLabel"
+		android:layout_below="@id/imageButtonDate" />
+	<ImageButton android:src="@mipmap/ic_btn_modify"
+		android:id="@+id/imageButtonCategory" android:layout_below="@id/imageButtonDate"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" />
+
+	<TextView android:id="@+id/textViewPaymentMethodLabel"
+		android:textStyle="bold" android:layout_below="@id/imageButtonCategory"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="@string/label_payment_method" />
+	<Spinner android:id="@+id/spinnerPaymentMethod"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@id/imageButtonCategory" android:layout_toRightOf="@id/textViewPaymentMethodLabel" />
+
+
+	<TextView android:id="@+id/textViewAmountLabel" android:text="@string/label_amount"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textStyle="bold" android:layout_below="@id/spinnerPaymentMethod" />
+	<Spinner android:id="@+id/spinnerCurrency"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/spinnerPaymentMethod" android:layout_alignParentRight="true" />
+	<EditText android:id="@+id/editTextAmount" android:inputType="numberDecimal"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/spinnerPaymentMethod"
+		android:layout_toRightOf="@id/textViewCategoryLabel" android:layout_toLeftOf="@+id/editTextExchangeRate"/>
+
+
+	<TextView android:id="@+id/textViewRefCheckNoLabel"
+		android:text="@string/label_ref_check_no" android:textStyle="bold"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/spinnerCurrency" />
+	<EditText android:id="@+id/editTextRefCheckNo"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@id/spinnerCurrency" android:inputType="text|textNoSuggestions"
+		android:layout_toRightOf="@id/textViewRefCheckNoLabel" />
+
+
+	<TextView android:id="@+id/textViewNoteTitle"
+		android:textStyle="bold" android:layout_below="@id/editTextRefCheckNo"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="@string/title_note" />
+	<EditText android:id="@+id/editTextDescription"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:inputType="text|textNoSuggestions" android:layout_below="@id/textViewNoteTitle" />
+
+
+	<LinearLayout android:layout_height="fill_parent"
+		android:layout_width="fill_parent" android:layout_below="@id/editTextDescription">
+
+		<Button android:text="@string/save" android:id="@+id/buttonSave"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" android:layout_gravity="bottom" />
+		<Button android:text="@string/back" android:id="@+id/buttonBack"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" android:layout_gravity="bottom" />
+
+	</LinearLayout>
+	<EditText android:inputType="numberDecimal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/editTextExchangeRate" android:layout_alignBaseline="@+id/editTextAmount" android:layout_alignBottom="@+id/editTextAmount" android:layout_toLeftOf="@+id/spinnerCurrency">
+		<!--requestFocus></requestFocus-->
+	</EditText>
+
+
+</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:padding="2dip">
+
+	<TextView android:layout_width="fill_parent" android:id="@+id/textViewMessage"
+		android:layout_height="wrap_content" android:textColor="@color/red" 
+		android:visibility="gone"/>
+
+	<TextView android:layout_width="wrap_content" android:id="@+id/textViewDestinationLabel"
+		android:layout_below="@id/textViewMessage" android:layout_height="wrap_content"
+		android:text="@string/label_destination" android:textStyle="bold" />
+
+	<EditText android:id="@+id/editTextDestination" android:inputType="text|textNoSuggestions"
+		android:layout_below="@id/textViewMessage" android:layout_width="fill_parent" android:hint="@string/hint_enter_trip_destination"
+		android:layout_height="wrap_content" android:layout_toRightOf="@id/textViewDestinationLabel" />
+
+	<TextView android:text="@string/label_date" android:id="@+id/textViewDateLabel"
+		android:layout_width="wrap_content" android:layout_below="@id/editTextDestination"
+		android:layout_height="wrap_content" android:textStyle="bold" />
+
+	<TextView android:id="@+id/textViewDate" android:text="to be fill"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/textViewDateLabel" android:layout_below="@id/editTextDestination" />
+
+	<ImageButton android:src="@mipmap/ic_btn_modify"
+		android:id="@+id/imageButtonDate" android:layout_below="@id/editTextDestination"
+		android:layout_alignParentRight="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+	<TextView android:text="@string/label_traveler" android:id="@+id/textViewTravelerLabel"
+		android:layout_width="wrap_content" android:layout_below="@id/imageButtonDate"
+		android:layout_height="wrap_content" android:textStyle="bold" />
+
+	<TextView android:id="@+id/textViewTraveler"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/textViewTravelerLabel"
+		android:layout_below="@id/imageButtonDate" />
+
+	<ImageButton android:src="@mipmap/ic_btn_modify"
+		android:id="@+id/imageButtonTraveler" android:layout_below="@id/imageButtonDate"
+		android:layout_alignParentRight="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+		
+	<TextView android:id="@+id/textViewCurrencyLabel"
+		android:textStyle="bold" android:layout_below="@id/imageButtonTraveler"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="@string/label_currency" />
+	<Spinner android:id="@+id/spinnerCurrency"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@id/imageButtonTraveler" android:layout_toRightOf="@id/textViewCurrencyLabel" />	
+		
+
+	<LinearLayout android:layout_below="@id/spinnerCurrency"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+		<Button android:layout_height="wrap_content" android:id="@+id/buttonSave"
+			android:text="@string/save" android:layout_width="wrap_content"
+			android:layout_weight="1" android:layout_gravity="bottom" />
+			
+		<Button android:layout_height="wrap_content" android:id="@+id/buttonDelete"
+			android:text="@string/delete" android:layout_width="wrap_content"
+			android:layout_weight="1" android:layout_gravity="bottom" />
+
+		<Button android:layout_height="wrap_content" android:id="@+id/buttonBack"
+			android:text="@string/back" android:layout_width="wrap_content"
+			android:layout_weight="1" android:layout_gravity="bottom" />
+
+	</LinearLayout>
+
+</RelativeLayout>

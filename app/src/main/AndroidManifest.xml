@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gagnon.mario.mr.traveloid" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault" >
+        <activity
+            android:name=".Main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".expense.ExpenseEditor" />
+        <activity android:name=".expense.ExpensesList" />
+        <activity android:name=".category.CategoriesList" />
+        <activity android:name=".category.CategoryEditor" />
+        <activity android:name=".trip.TripsList" />
+        <activity android:name=".trip.TripEditor" />
+        <activity android:name=".traveler.TravelersList" />
+        <activity android:name=".pettycash.PettyCashList"/>
+        <activity android:name=".pettycash.PettyCashEditor"/>
+
+    </application>
+    <!--uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest>

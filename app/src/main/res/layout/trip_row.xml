@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<TextView android:layout_width="wrap_content" android:id="@+id/textViewDestinationLabel"
+		android:layout_height="wrap_content" android:textStyle="bold"
+		android:text="@string/label_destination" />
+
+	<TextView android:id="@+id/textViewDestination"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="To Be Fill" android:layout_toRightOf="@id/textViewDestinationLabel" />
+
+	<TextView android:layout_width="wrap_content" android:id="@+id/textViewDateLabel"
+		android:layout_height="wrap_content" android:text="@string/label_date"
+		android:layout_below="@id/textViewDestinationLabel" android:textStyle="bold" />
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="To Be Fill"
+		android:id="@+id/textViewDate" android:layout_below="@id/textViewDestination"
+		android:layout_toRightOf="@id/textViewDateLabel" />
+
+</RelativeLayout>
+
