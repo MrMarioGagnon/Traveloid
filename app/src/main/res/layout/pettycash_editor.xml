@@ -1,80 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_height="match_parent" android:layout_width="fill_parent"
-	android:padding="2dip">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <!-- Message Section -->
-	<TextView android:layout_width="fill_parent" android:id="@+id/textViewMessage"
-		android:layout_height="wrap_content" android:textColor="@color/red"
-		android:visibility="gone" />
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:visibility="gone"/>
 
     <!-- Trip Section -->
-	<TextView android:id="@+id/textViewTripLabel" android:text="@string/label_trip"
-		android:textStyle="bold" android:layout_width="wrap_content"
-		android:layout_below="@id/textViewMessage" android:layout_height="wrap_content" />
-	<TextView android:id="@+id/textViewTripName"
-		android:layout_below="@id/textViewMessage" android:layout_toRightOf="@id/textViewTripLabel"
-		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/textViewTripLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_trip"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewTripName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewMessage"/>
+    </LinearLayout>
     <!-- Name Section -->
-	<TextView android:text="@string/label_name" android:id="@+id/textViewNameLabel"
-		android:textStyle="bold" android:layout_below="@id/textViewTripLabel"
-		android:layout_width="wrap_content" android:layout_height="wrap_content" />
-	<EditText android:id="@+id/editTextName"
-		android:layout_below="@id/textViewTripLabel" android:layout_toRightOf="@id/textViewNameLabel"
-		android:layout_width="fill_parent" android:layout_height="wrap_content">
-    <requestFocus></requestFocus>
-    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_name"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <requestFocus></requestFocus>
+        </EditText>
+    </LinearLayout>
 
     <!-- Description Section -->
-	<TextView android:text="@string/label_description" android:id="@+id/textViewDescriptionLabel"
-		android:textStyle="bold" android:layout_below="@id/editTextName"
-		android:layout_width="wrap_content" android:layout_height="wrap_content" />
-	<EditText android:id="@+id/editTextDescription"
-		android:layout_below="@id/editTextName" android:layout_toRightOf="@id/textViewDescriptionLabel"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:layout_alignRight="@+id/spinnerCurrency"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/textViewDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextName"
+            android:text="@string/label_description"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/spinnerCurrency"/>
+    </LinearLayout>
     <!-- Amount Section -->
-	<TextView android:id="@+id/textViewAmountLabel" android:text="@string/label_amount"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:textStyle="bold" android:layout_below="@id/editTextDescription" />
-	<EditText android:id="@+id/editTextAmount" android:inputType="numberDecimal"
-		android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/editTextDescription"
-		android:layout_toRightOf="@id/textViewAmountLabel">
-	</EditText>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewAmountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_amount"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextAmount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal">
+        </EditText>
+    </LinearLayout>
     <!-- Exchange Rate Section -->
-	<TextView android:id="@+id/textViewExchangeRateLabel" android:textStyle="bold" android:text="@string/label_exchange_rate"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:layout_below="@id/editTextAmount"/>
-	<EditText android:inputType="numberDecimal" android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:id="@+id/editTextExchangeRate"
-		android:layout_below="@id/editTextAmount" android:layout_toRightOf="@id/textViewExchangeRateLabel">
-	</EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/textViewExchangeRateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_exchange_rate"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextExchangeRate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal">
+        </EditText>
+    </LinearLayout>
     <!-- Currency Section -->
-	<TextView
-		android:layout_width="wrap_content" android:textStyle="bold" android:layout_below="@id/editTextExchangeRate"
-		android:layout_height="wrap_content" android:id="@+id/textViewCurrencyLabel" android:text="@string/label_currency"/>
-	<Spinner android:id="@+id/spinnerCurrency"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:layout_below="@id/editTextExchangeRate" android:layout_toRightOf="@id/textViewCurrencyLabel"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/textViewCurrencyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_currency"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerCurrency"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextExchangeRate"/>
+    </LinearLayout>
     <!-- Button Section -->
-	<LinearLayout android:layout_height="fill_parent"
-		android:layout_width="fill_parent">
 
-		<Button android:text="@string/save" android:id="@+id/buttonSave"
-			android:layout_width="wrap_content" android:layout_height="wrap_content"
-			android:layout_weight="1" android:layout_gravity="bottom" />
-		<Button android:text="@string/back" android:id="@+id/buttonBack"
-			android:layout_width="wrap_content" android:layout_height="wrap_content"
-			android:layout_weight="1" android:layout_gravity="bottom" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-	</LinearLayout>
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/save"/>
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/back"/>
+
+    </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>
 
